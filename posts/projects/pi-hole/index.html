@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="en-gb"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  
+  <title>Project: Pi-Hole - Mahdi Malkawi&#39;s Website</title>
+
+  
+  <meta name="theme-color" />
+  
+  <meta name="description" content="Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but supports most Linux distributions and Docker containers.
+Pi-Hole also comes with an informative web interface to track and manage queries on the network.
+I have decided to go on with this project, as it improves network performance since advertisements are blocked before they are downloaded by intercepting the DNS request that attempts to connect to obtain IP addresses of advertisement and telemetry servers." />
+  <meta name="author" content="" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://malkawimahdi.github.io/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://malkawimahdi.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+  <link
+    rel="preload"
+    as="image"
+    href="https://malkawimahdi.github.io/theme.png"
+  />
+
+  
+  
+  
+  
+
+  
+  <link rel="preload" as="image" href="https://malkawimahdi.github.io/github.svg" />
+  
+  <link rel="preload" as="image" href="https://malkawimahdi.github.io/rss.svg" />
+  
+
+  
+  <link rel="icon" href="https://malkawimahdi.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://malkawimahdi.github.io/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.92.2" />
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Project: Pi-Hole" />
+<meta property="og:description" content="Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but supports most Linux distributions and Docker containers.
+Pi-Hole also comes with an informative web interface to track and manage queries on the network.
+I have decided to go on with this project, as it improves network performance since advertisements are blocked before they are downloaded by intercepting the DNS request that attempts to connect to obtain IP addresses of advertisement and telemetry servers." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://malkawimahdi.github.io/posts/projects/pi-hole/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-05T16:10:40+00:00" />
+<meta property="article:modified_time" content="2023-01-05T16:10:40+00:00" />
+
+
+  
+  <meta itemprop="name" content="Project: Pi-Hole">
+<meta itemprop="description" content="Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but supports most Linux distributions and Docker containers.
+Pi-Hole also comes with an informative web interface to track and manage queries on the network.
+I have decided to go on with this project, as it improves network performance since advertisements are blocked before they are downloaded by intercepting the DNS request that attempts to connect to obtain IP addresses of advertisement and telemetry servers."><meta itemprop="datePublished" content="2023-01-05T16:10:40+00:00" />
+<meta itemprop="dateModified" content="2023-01-05T16:10:40+00:00" />
+<meta itemprop="wordCount" content="752">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project: Pi-Hole"/>
+<meta name="twitter:description" content="Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but supports most Linux distributions and Docker containers.
+Pi-Hole also comes with an informative web interface to track and manage queries on the network.
+I have decided to go on with this project, as it improves network performance since advertisements are blocked before they are downloaded by intercepting the DNS request that attempts to connect to obtain IP addresses of advertisement and telemetry servers."/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold" href="https://malkawimahdi.github.io/"
+      >Mahdi Malkawi&#39;s Website</a
+    >
+    <a
+      class="btn-dark ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+    ></a>
+  </div>
+
+  <a
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+  ></a>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 dark:invert lg:mt-0 lg:ml-12 lg:items-center lg:space-x-6"
+    >
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href=" https://github.com/malkawimahdi "
+        target="_blank"
+      ></a>
+      
+      <a
+        class="h-8 w-8 [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./rss.svg)"
+        href=" https://malkawimahdi.github.io/index.xml "
+        target="_blank"
+      ></a>
+      
+    </nav>
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-20 pb-32 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">Project: Pi-Hole</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>Jan 5, 2023</time>
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but supports most Linux distributions and Docker containers.</p>
+<p>Pi-Hole also comes with an informative web interface to track and manage queries on the network.</p>
+<p>I have decided to go on with this project, as it improves network performance since advertisements are blocked before they are downloaded by intercepting the DNS request that attempts to connect to obtain IP addresses of advertisement and telemetry servers.</p>
+<p>I have noticed on my network that they are usually over 30 different trackers and adverts built into a typical webpage. This information has been derived from my statistical data from my adblocker on the browser level (Adguard). Also, on commonly visited websites such as Reddit and YouTube, there is an abundance of adverts that worsen the experience and reduce network performance.</p>
+<p>What Pi-Hole does, is that it stands in between the device and the DNS request. If a request for a blocklisted site comes through, it will stop the request and respond with an unspecified address telling the device that the ad server does not exist. This is referred to as a DNS sinkhole.</p>
+<p>Some advertisements cannot be blocked using this service as some embedded adverts that Facebook and other social media sites implement are embedded into the webpage that the content is on. This applies to a few websites, meaning this software is still highly effective.</p>
+<p>Another reason that I utilise Pi-Hole is that it allows complete management through a web interface. This allows modifications remotely by logging in with the framework of:
+IP ADDRESS/admin.</p>
+<p>Entering the correct details required for installation.</p>
+<p>Other changes that have occurred due to the installation of Pi-Hole is that lower-end devices connected to my network are significantly more responsive because advertisements are blocked before they are loaded in.</p>
+<p>Pi-Hole currently blocks 45.6% of DNS requests.</p>
+<p>Overall, Pi-Hole has increased the responsiveness of my network and ensured that most advertisements are removed from web pages at the DNS level.</p>
+<p>Finally, another perk I found out about using Pi-Hole, is that Pi-Hole shows the status of the Raspberry Pi, such as the Temperature, CPU load and memory consumption. These are generally essential metrics that I usually check for using the bash commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-console" data-lang="console">mahdimalkawi@Xubuntu:~$ vcgenmd measure_temp
+35.6C
+</code></pre></div><p>This bash command above shows the temperature of the CPU for my Raspberry Pi 4. However, this command has drawbacks, which are that I would have to manually enter this command every time I would like to check the metric. Now with Pi-Hole, I have access to this metric and more 24/7, and I also can view this metric on all the devices that are connected to my network without unnecessarily typing bash commands.</p>
+<p>I encountered a few problems using Pi-Hole, such as installing new ad list definitions. I noticed that once I added a new list to Pi-Hole, it was not implemented onto my network. I overcame this problem whilst going through the settings of the Pi-Hole on the web interface, where I stumbled upon a setting that is located under Tools &gt; Update Gravity.</p>
+<p>Gravity is a list that is constructed by combining all ad lists that have been added. The reason that I found that new definitions were not being implemented onto my network was that I did not update Gravity. I understood this to be the issue, as Gravity is the centralised ad list that contains all the other ad lists. For the ad list to be applied to my network, it would have to first go to Gravity. Once Gravity was updated, I saw that my Domains on the blocklist grew from 150,000 to 7,631,269.</p>
+<p>Once the original problem of my ad lists was solved, I encountered another problem related to implementing the new ad lists. This is because all the devices that were connected to my network could not see YouTube thumbnails. I pinpointed the problem to the new ad-list definitions as this did not occur with the base definitions that the Pi-Hole came with.</p>
+<p>To solve this problem, I disabled ad lists that contained definitions for YouTube. Once I refreshed the webpage, and I saw that the YouTube thumbnails were being loaded, I deleted the conflicting ad list. This resolved the problem. As of typing this 5th January 2023, no other issues have been encountered.</p>
+</section>
+
+  
+  
+
+  
+  
+  
+  <nav class="mt-24 flex rounded-lg bg-black/[3%] text-lg dark:bg-white/[8%]">
+    
+    
+    <a
+      class="ml-auto flex w-1/2 items-center justify-end p-6 pl-3 no-underline"
+      href="https://malkawimahdi.github.io/posts/first-post/"
+      ><span>First Post</span><span class="ml-1.5">→</span></a
+    >
+    
+  </nav>
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60">
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://malkawimahdi.github.io/">Mahdi Malkawi&#39;s Website</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank">Powered by Hugo️️</a
+  >️
+  <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank"
+    >▷ Paper 6</a
+  >
+</footer>
+
+  </body>
+</html>

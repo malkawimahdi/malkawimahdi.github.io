@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Mahdi Malkawi&#39;s Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 02 Nov 2022 16:10:40 +0000</lastBuildDate><atom:link href="https://malkawimahdi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Jan 2023 16:10:40 +0000</lastBuildDate><atom:link href="https://malkawimahdi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project: Pi-Hole</title>
+      <link>https://malkawimahdi.github.io/posts/projects/pi-hole/</link>
+      <pubDate>Thu, 05 Jan 2023 16:10:40 +0000</pubDate>
+      
+      <guid>https://malkawimahdi.github.io/posts/projects/pi-hole/</guid>
+      <description>Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but supports most Linux distributions and Docker containers.
+Pi-Hole also comes with an informative web interface to track and manage queries on the network.
+I have decided to go on with this project, as it improves network performance since advertisements are blocked before they are downloaded by intercepting the DNS request that attempts to connect to obtain IP addresses of advertisement and telemetry servers.</description>
+    </item>
+    
     <item>
       <title>First Post</title>
       <link>https://malkawimahdi.github.io/posts/first-post/</link>
